@@ -24,7 +24,7 @@ class TableViewPage extends Component {
         console.log(value)
         this.setState({candidates: value});
         console.log(this.state.candidates);
-        // this.props.history.push('/user/' + id);
+
     }
 
     render() {
@@ -34,17 +34,14 @@ class TableViewPage extends Component {
                 ...this.state.candidates[key],
                 id: key
             })
-            console.log(array)
+			
         }
 
         return (
             <div className='TableView'>
                 <Search/>
                 <TableContent 
-                    candidates={this.state.candidates}/>
-
-                <DetailPage id={2}/>
-                
+                    candidates={this.state.candidates}/>                
                 {/* {this.state.candidates.map(arr=>(
                     <DetailPage key={arr.id} candidates={arr.first_name}/>
                 ))} */}
